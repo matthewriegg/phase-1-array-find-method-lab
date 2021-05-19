@@ -12,13 +12,6 @@
 //     //...
 //   ]
 
-let superbowlWin = (record) =>{
-    let win = record.find(object => object.result === "W")
-
-    return !!win ? win.year : undefined;
-}
-
-
 // let superbowlWin = (record) =>{
 //     let win = record.find(object => object.result === "W")
 
@@ -26,3 +19,21 @@ let superbowlWin = (record) =>{
 // }
 
 
+function xxx(element) {
+    return element['result'] === 'W';
+}
+
+function superbowlWin(array) {
+    let result = array.find(xxx);
+    if (result) {
+        return result.year;
+    } else {
+        return result;
+    }
+}
+
+// let superbowlWin = (record) =>{
+//     let win = record.find(object => object.result === "W")
+
+//     return !!win ? win.year : undefined;
+// }
